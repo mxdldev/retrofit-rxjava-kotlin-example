@@ -6,10 +6,10 @@ import android.util.Log;
 import android.view.View;
 
 import com.mxdl.retrofit.R;
-import com.mxdl.retrofit.java.api.service.CommonCallService;
-import com.mxdl.retrofit.java.api.manager.RetrofitCallManager;
-import com.mxdl.retrofit.api.entity.Token;
-import com.mxdl.retrofit.api.entity.User;
+import com.mxdl.retrofit.java.service.CommonCallService;
+import com.mxdl.retrofit.java.manager.RetrofitCallManager;
+import com.mxdl.retrofit.java.entity.Token;
+import com.mxdl.retrofit.java.entity.User;
 
 import retrofit2.Call;
 import retrofit2.Callback;

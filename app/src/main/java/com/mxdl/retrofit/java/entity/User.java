@@ -1,4 +1,4 @@
-package com.mxdl.retrofit.api.entity;
+package com.mxdl.retrofit.java.entity;
 
 /**
  * Description: <User><br>

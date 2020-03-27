@@ -1,7 +1,7 @@
-package com.mxdl.retrofit.java.api.service;
+package com.mxdl.retrofit.java.service;
 
-import com.mxdl.retrofit.api.entity.Token;
-import com.mxdl.retrofit.api.entity.User;
+import com.mxdl.retrofit.java.entity.Token;
+import com.mxdl.retrofit.java.entity.User;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

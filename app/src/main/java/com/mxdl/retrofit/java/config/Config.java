@@ -1,4 +1,4 @@
-package com.mxdl.retrofit.api.confit;
+package com.mxdl.retrofit.java.config;
 
 /**
  * Description: <Config><br>

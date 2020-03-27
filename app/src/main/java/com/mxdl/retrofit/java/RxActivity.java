@@ -6,10 +6,10 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mxdl.retrofit.R;
-import com.mxdl.retrofit.api.entity.Token;
-import com.mxdl.retrofit.api.entity.User;
-import com.mxdl.retrofit.java.api.service.CommonRxService;
-import com.mxdl.retrofit.java.api.manager.RetrofitRxManager;
+import com.mxdl.retrofit.java.entity.Token;
+import com.mxdl.retrofit.java.entity.User;
+import com.mxdl.retrofit.java.service.CommonRxService;
+import com.mxdl.retrofit.java.manager.RetrofitRxManager;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
