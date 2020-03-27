@@ -3,7 +3,7 @@ package com.mxdl.retrofit.java.config;
 /**
  * Description: <Config><br>
  * Author:      mxdl<br>
- * Date:        2020/3/26<br>
+ * Date:        2020/3/27<br>
  * Version:     V1.0.0<br>
  * Update:     <br>
  */

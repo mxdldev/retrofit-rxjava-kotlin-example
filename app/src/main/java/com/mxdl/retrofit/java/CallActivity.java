@@ -22,18 +22,18 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call);
-        findViewById(R.id.btn_net).setOnClickListener(this);
-        findViewById(R.id.btn_create_user).setOnClickListener(this);
+        findViewById(R.id.btn_token1).setOnClickListener(this);
+        findViewById(R.id.btn_create_user1).setOnClickListener(this);
 
         commonCallService = RetrofitCallManager.getInstance(this).getCommonService();
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_net:
+            case R.id.btn_token1:
                 getToken();
                 break;
-            case R.id.btn_create_user:
+            case R.id.btn_create_user1:
                 createUser();
                 break;
         }

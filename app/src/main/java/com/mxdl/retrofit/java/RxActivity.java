@@ -24,18 +24,18 @@ public class RxActivity extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call);
-        findViewById(R.id.btn_net).setOnClickListener(this);
-        findViewById(R.id.btn_create_user).setOnClickListener(this);
+        findViewById(R.id.btn_token1).setOnClickListener(this);
+        findViewById(R.id.btn_create_user1).setOnClickListener(this);
 
         commonCallService = RetrofitRxManager.getInstance(this).getCommonRxService();
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_net:
+            case R.id.btn_token1:
                 getToken();
                 break;
-            case R.id.btn_create_user:
+            case R.id.btn_create_user1:
                 createUser();
                 break;
         }
