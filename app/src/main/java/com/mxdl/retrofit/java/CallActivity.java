@@ -4,25 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import com.mxdl.retrofit.api.CommonService;
+import com.mxdl.retrofit.api.call.CommonCallService;
+import com.mxdl.retrofit.api.call.RetrofitCallManager;
 import com.mxdl.retrofit.api.entity.Token;
 import com.mxdl.retrofit.api.entity.User;
-import com.mxdl.retrofit.api.http.RetrofitManager;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
-    private CommonService commonService;
+public class CallActivity extends AppCompatActivity implements View.OnClickListener {
+    private CommonCallService commonCallService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_call);
         findViewById(R.id.btn_net).setOnClickListener(this);
         findViewById(R.id.btn_create_user).setOnClickListener(this);
 
-        commonService = RetrofitManager.getInstance(this).getCommonService();
+        commonCallService = RetrofitCallManager.getInstance(this).getCommonService();
     }
     @Override
     public void onClick(View v) {
@@ -36,13 +37,13 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         }
     }
     public void getToken() {
-        Call<Token> tokenCall = commonService.getToken("Basic bXhkbC1jbGllbnQ6bXhkbC1zZWNyZXQ=", "password", "mxdl", "123456");
+        Call<Token> tokenCall = commonCallService.getToken("Basic bXhkbC1jbGllbnQ6bXhkbC1zZWNyZXQ=", "password", "mxdl", "123456");
         tokenCall.enqueue(new Callback<Token>() {
             @Override
             public void onResponse(Call<Token> call, Response<Token> response) {
                 Token body = response.body();
                 if (body != null) {
-                    RetrofitManager.getInstance(Main2Activity.this).setToken(body.getAccess_token());
+                    RetrofitCallManager.getInstance(CallActivity.this).setToken(body.getAccess_token());
                     Log.v("MYTAG", body.toString());
                 }
             }
@@ -57,7 +58,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
     private void createUser() {
         //创建一个创建用户的请求对象
-        Call<User> createUserCall = commonService.createUser(new User("zhangsan", "1234560"));
+        Call<User> createUserCall = commonCallService.createUser(new User("zhangsan", "1234560"));
         //执行这个请求任务
         createUserCall.enqueue(new Callback<User>() {
             @Override

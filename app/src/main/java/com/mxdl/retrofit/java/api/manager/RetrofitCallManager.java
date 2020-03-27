@@ -1,11 +1,11 @@
-package com.mxdl.retrofit.api.http;
+package com.mxdl.retrofit.api.call;
 
 import android.content.Context;
 import android.text.TextUtils;
 
 import com.ihsanbal.logging.Level;
 import com.ihsanbal.logging.LoggingInterceptor;
-import com.mxdl.retrofit.api.CommonService;
+import com.mxdl.retrofit.api.confit.Config;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -20,18 +20,18 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Description: <RetrofitManager><br>
+ * Description: <RetrofitCallManager><br>
  * Author:      mxdl<br>
  * Date:        2020/3/26<br>
  * Version:     V1.0.0<br>
  * Update:     <br>
  */
-public class RetrofitManager {
-    private static RetrofitManager retrofitManager;
+public class RetrofitCallManager {
+    private static RetrofitCallManager retrofitCallManager;
     private Retrofit retrofit;
     private String token;
 
-    private RetrofitManager() {
+    private RetrofitCallManager() {
         OkHttpClient httpClient = new OkHttpClient().newBuilder()
                 .addInterceptor(new Interceptor() {
                     @NotNull
@@ -65,19 +65,19 @@ public class RetrofitManager {
                 .build();
     }
 
-    public static RetrofitManager getInstance(Context context) {
-        if (retrofitManager == null) {
-            synchronized (RetrofitManager.class) {
-                if (retrofitManager == null) {
-                    retrofitManager = new RetrofitManager();
+    public static RetrofitCallManager getInstance(Context context) {
+        if (retrofitCallManager == null) {
+            synchronized (RetrofitCallManager.class) {
+                if (retrofitCallManager == null) {
+                    retrofitCallManager = new RetrofitCallManager();
                 }
             }
         }
-        return retrofitManager;
+        return retrofitCallManager;
     }
 
-    public CommonService getCommonService() {
-        return retrofit.create(CommonService.class);
+    public CommonCallService getCommonService() {
+        return retrofit.create(CommonCallService.class);
     }
 
     public void setToken(String token) {
