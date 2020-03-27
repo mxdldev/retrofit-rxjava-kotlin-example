@@ -1,11 +1,13 @@
-package com.mxdl.retrofit;
+package com.mxdl.retrofit.java;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import com.mxdl.retrofit.api.call.CommonCallService;
-import com.mxdl.retrofit.api.call.RetrofitCallManager;
+
+import com.mxdl.retrofit.R;
+import com.mxdl.retrofit.java.api.service.CommonCallService;
+import com.mxdl.retrofit.java.api.manager.RetrofitCallManager;
 import com.mxdl.retrofit.api.entity.Token;
 import com.mxdl.retrofit.api.entity.User;
 

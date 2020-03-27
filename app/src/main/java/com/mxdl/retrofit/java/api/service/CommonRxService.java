@@ -1,4 +1,4 @@
-package com.mxdl.retrofit.api.rxjava;
+package com.mxdl.retrofit.java.api.service;
 
 import com.mxdl.retrofit.api.entity.Token;
 import com.mxdl.retrofit.api.entity.User;

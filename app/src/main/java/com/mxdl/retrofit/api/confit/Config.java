@@ -1,4 +1,4 @@
-package com.mxdl.retrofit.api.http;
+package com.mxdl.retrofit.api.confit;
 
 /**
  * Description: <Config><br>

@@ -1,10 +1,11 @@
-package com.mxdl.retrofit.api.call;
+package com.mxdl.retrofit.java.api.manager;
 
 import android.content.Context;
 import android.text.TextUtils;
 
 import com.ihsanbal.logging.Level;
 import com.ihsanbal.logging.LoggingInterceptor;
+import com.mxdl.retrofit.java.api.service.CommonCallService;
 import com.mxdl.retrofit.api.confit.Config;
 
 import org.jetbrains.annotations.NotNull;

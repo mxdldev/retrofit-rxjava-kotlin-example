@@ -1,19 +1,18 @@
-package com.mxdl.retrofit;
+package com.mxdl.retrofit.java;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.mxdl.retrofit.api.call.RetrofitCallManager;
+import com.mxdl.retrofit.R;
 import com.mxdl.retrofit.api.entity.Token;
 import com.mxdl.retrofit.api.entity.User;
-import com.mxdl.retrofit.api.rxjava.CommonRxService;
-import com.mxdl.retrofit.api.rxjava.RetrofitRxManager;
+import com.mxdl.retrofit.java.api.service.CommonRxService;
+import com.mxdl.retrofit.java.api.manager.RetrofitRxManager;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
